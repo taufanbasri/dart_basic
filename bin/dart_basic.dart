@@ -2,8 +2,18 @@ import 'dart:io';
 
 void main(List<String> arguments) {
   print('Masukkan angka: ');
-  String input = stdin.readLineSync();
-  int number = int.tryParse(input);
+  int number = int.tryParse(stdin.readLineSync());
+  String output;
 
-  print(number + 10);
+  // if (number > 0) {
+  //   print('positif');
+  // } else if (number < 0) {
+  //   print('negatif');
+  // } else {
+  //   print('nol');
+  // }
+
+  output = (number > 0) ? 'positif' : 'negative atau nol';
+
+  print(output);
 }
