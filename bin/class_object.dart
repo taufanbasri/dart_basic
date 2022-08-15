@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:dart_basic/persegi_panjang.dart';
 
 void main(List<String> args) {
   PersegiPanjang kotak1, kotak2;
@@ -8,7 +9,7 @@ void main(List<String> args) {
   kotak1 = PersegiPanjang();
   kotak1.panjang = 3;
   kotak1.lebar = 2;
-  luaskotak1 = kotak1.hitungLuas();
+  luaskotak1 = kotak1.luas;
 
   kotak2 = PersegiPanjang();
   print('Masukkan panjang: ');
@@ -18,13 +19,5 @@ void main(List<String> args) {
 
   print(luaskotak1);
 
-  print(kotak2.hitungLuas());
-}
-
-class PersegiPanjang {
-  double panjang, lebar;
-
-  double hitungLuas() {
-    return panjang * lebar;
-  }
+  print(kotak2.luas);
 }
