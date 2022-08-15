@@ -1,17 +1,9 @@
 import 'dart:io';
 
-double luas_segiempat(double panjang, double lebar) {
-  double hasil;
-
-  hasil = panjang * lebar;
-
-  return hasil;
-}
-
-void say_hello() {
-  print('hello world!');
+String say(String from, String message, {String to, String appName}) {
+  return "$from say $message ${(to != null) ? "to $to" : ""} ${(appName != null) ? "via $appName" : ""}";
 }
 
 void main(List<String> arguments) {
-  say_hello();
+  print(say('taufan', 'hello world', to: 'evita'));
 }
