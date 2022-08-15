@@ -1,10 +1,17 @@
 void main(List<String> args) {
-  List<int> myList = [];
+  List<int> myList = [3, 4, 6, 7, 1, 2, 3, 4, 6, 3, 4, 6, 234, 6, 8];
   List<int> list = [1, 2, 3];
+  List<String> listMap = [];
 
-  for (int bilangan in list) {
-    print(bilangan);
-  }
+  listMap = myList.map((e) => "angka $e").toList();
+
+  listMap.forEach((element) {
+    print(element);
+  });
+
+  // for (int bilangan in list) {
+  //   print(bilangan);
+  // }
 
   myList.add(10); // menambahkan data ke array
   myList.addAll(list); // menambahkan keseluruhan data dalam array
@@ -20,11 +27,11 @@ void main(List<String> args) {
   // menghapus semua angka ganjil
   myList.removeWhere((number) => number % 2 != 0);
 
-  if (myList.contains(2)) {
-    print('betul');
-  }
+  // if (myList.contains(2)) {
+  //   print('betul');
+  // }
 
-  myList.forEach((bilangan) {
-    print(bilangan);
-  });
+  // myList.forEach((bilangan) {
+  //   print(bilangan);
+  // });
 }
