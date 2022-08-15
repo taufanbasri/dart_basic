@@ -1,11 +1,20 @@
 import 'dart:io';
 
+double luas_segiempat(double panjang, double lebar) {
+  double hasil;
+
+  hasil = panjang * lebar;
+
+  return hasil;
+}
+
 void main(List<String> arguments) {
-  int counter = 0;
+  double panjang, lebar, luas;
 
-  do {
-    print("hello $counter");
+  panjang = double.tryParse(stdin.readLineSync());
+  lebar = double.tryParse(stdin.readLineSync());
 
-    counter++;
-  } while (counter < 5);
+  luas = luas_segiempat(panjang, lebar);
+
+  print(luas);
 }
