@@ -14,5 +14,8 @@ void main(List<String> arguments) {
   print(say('taufan', 'hello world', to: 'evita'));
   print(say2('taufan', 'hello world', 'evita', 'whatsapp'));
 
-  print(luas_segiempat(10, 5));
+  Function f;
+  f = luas_segiempat;
+
+  print(f(10.0, 5.0));
 }
