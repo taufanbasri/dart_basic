@@ -1,13 +1,9 @@
-import 'person.dart';
-import 'student.dart';
+import 'package:dart_basic/ignore_parameter.dart';
 
 void main(List<String> args) {
-  // Person person = Person();
-  Person person = Person(name: "Taufan");
-  // person.name = "Taufan";
+  var person = Person('Taufan', doingHobby: (_) {
+    print('Swimming in the pool.');
+  });
 
-  Person student = Student();
-
-  print(person.name);
-  print(student.name);
+  person.takeRest();
 }
