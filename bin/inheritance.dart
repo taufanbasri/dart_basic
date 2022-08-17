@@ -1,3 +1,4 @@
+import 'package:dart_basic/drink_ability_mixin.dart';
 import 'package:dart_basic/flying_monster.dart';
 import 'package:dart_basic/hero.dart';
 import 'package:dart_basic/monster.dart';
@@ -14,8 +15,8 @@ void main(List<String> args) {
   monsters.add(MonsterUcoa());
 
   for (Monster m in monsters) {
-    if (m is FlyingMonster) {
-      print((m as FlyingMonster).fly());
+    if (m is DrinkAbilityMixin) {
+      print((m as DrinkAbilityMixin).drink());
     }
   }
 }
