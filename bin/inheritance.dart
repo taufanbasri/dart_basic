@@ -1,16 +1,24 @@
 import 'package:dart_basic/hero.dart';
 import 'package:dart_basic/monster.dart';
+import 'package:dart_basic/monsters/kecoa.dart';
+import 'package:dart_basic/monsters/ubur_ubur.dart';
 
 void main(List<String> args) {
   Hero h = Hero();
-  Monster m = Monster();
+  Monster m = UburUbur();
+  UburUbur u = UburUbur();
 
-  h.healthPoint = -10;
-  m.healthPoint = 10;
+  print((m as UburUbur).swimming());
 
-  print("Hero HP: ${h.healthPoint}");
-  print("Monster HP: ${m.healthPoint}");
+  List<Monster> monsters = [];
 
-  print(h.killMonster());
-  print(m.eatHuman());
+  monsters.add(Kecoa());
+  monsters.add(UburUbur());
+  monsters.add(Kecoa());
+
+  for (Monster m in monsters) {
+    if (m is UburUbur) {
+      print(m.eatHuman());
+    }
+  }
 }
