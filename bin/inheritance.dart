@@ -17,8 +17,7 @@ void main(List<String> args) {
   monsters.add(Kecoa());
 
   for (Monster m in monsters) {
-    if (m is UburUbur) {
-      print(m.eatHuman());
-    }
+    print(m.move());
+    print(m.eatHuman());
   }
 }
