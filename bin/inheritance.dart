@@ -1,23 +1,21 @@
+import 'package:dart_basic/flying_monster.dart';
 import 'package:dart_basic/hero.dart';
 import 'package:dart_basic/monster.dart';
 import 'package:dart_basic/monsters/kecoa.dart';
+import 'package:dart_basic/monsters/monster_ucoa.dart';
 import 'package:dart_basic/monsters/ubur_ubur.dart';
 
 void main(List<String> args) {
-  Hero h = Hero();
-  Monster m = UburUbur();
-  UburUbur u = UburUbur();
-
-  print((m as UburUbur).swimming());
-
   List<Monster> monsters = [];
 
   monsters.add(Kecoa());
   monsters.add(UburUbur());
   monsters.add(Kecoa());
+  monsters.add(MonsterUcoa());
 
   for (Monster m in monsters) {
-    print(m.move());
-    print(m.eatHuman());
+    if (m is FlyingMonster) {
+      print((m as FlyingMonster).fly());
+    }
   }
 }
