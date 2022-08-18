@@ -15,9 +15,17 @@ void main(List<String> args) {
   // persons.sort((person1, person2) => person1.role.compareTo(person2.role));
 
   // Custom sort berdasarkan role & age
+  // persons.sort((person1, person2) {
+  //   if (person1.role.compareTo(person2.role) != 0) {
+  //     return person1.role.compareTo(person2.role);
+  //   } else {
+  //     return person1.age.compareTo(person2.age);
+  //   }
+  // });
+
   persons.sort((person1, person2) {
-    if (person1.role.compareTo(person2.role) != 0) {
-      return person1.role.compareTo(person2.role);
+    if (person1.roleWeight - person2.roleWeight != 0) {
+      return person1.roleWeight - person2.roleWeight;
     } else {
       return person1.age.compareTo(person2.age);
     }
@@ -33,4 +41,17 @@ class Person {
   final int age;
 
   Person(this.role, this.age);
+
+  int get roleWeight {
+    switch (role) {
+      case 'Merchant':
+        return 1;
+        break;
+      case 'Administrator':
+        return 2;
+        break;
+      default:
+        return 3;
+    }
+  }
 }
