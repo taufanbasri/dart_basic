@@ -1,7 +1,12 @@
 void main(List<String> args) {
-  MonsterUcoa monster = MonsterUcoa(status: UcoaStatus.confused);
+  MonsterUcoa monster = MonsterUcoa(status: UcoaStatus.confused)
+    ..move()
+    ..eat();
 
-  monster.move();
+  // bisa juga begini
+  monster
+    ..move()
+    ..eat();
 }
 
 enum UcoaStatus { normal, poisoned, confused }
